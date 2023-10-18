@@ -2,7 +2,7 @@ import Envtiroment from "./Treejs/Envtiroment"
 
 function App() {
   return (
-    <div className="h-[100vh] bg-[#1e1e21f4]">
+    <div className="h-[100vh] bg-[#141416f4]">
 
       <Envtiroment/>
     </div>
