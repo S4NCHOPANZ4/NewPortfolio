@@ -13,6 +13,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.Desktop{
+  font-family: 'VT323', monospace;
+}
+.border-navbarIcon{
+  border: 3px outset #c3c3c3;
+}
+
+.canvas{
+
+}
 
 
 
