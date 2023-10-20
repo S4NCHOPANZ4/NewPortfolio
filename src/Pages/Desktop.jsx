@@ -1,45 +1,69 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
-import Icon from '../Components/Icon'
-import MyPortfolioIcon from '../assets/icons/iconPortfolio.png'
-import CaseJoltIcon from '../assets/icons/CaseJolt-Icon.png'
-import filmfoliaIcon from '../assets/icons/filmfolia-Icon.png'
-import FitHubIcon from '../assets/icons/FItHub-Icon.png'
-import StereohIcon from '../assets/icons/Stereoh-Icon.png'
+import React, { useEffect, useState } from "react";
+import Navbar from "../Components/Navbar";
+import Icon from "../Components/Icon";
+import MyPortfolioIcon from "../assets/icons/iconPortfolio.png";
+import CaseJoltIcon from "../assets/icons/CaseJolt-Icon.png";
+import filmfoliaIcon from "../assets/icons/filmfolia-Icon.png";
+import FitHubIcon from "../assets/icons/FItHub-Icon.png";
+import StereohIcon from "../assets/icons/Stereoh-Icon.png";
+import WindowUI from "./WindowUI.jsx";
 
-const Desktop = ({setClicked}) => {
+const Desktop = ({ setClicked }) => {
+  const [tabs, setTabs] = useState([
+    {
+      name: "My Portfolio",
+      icon: "https://win98icons.alexmeub.com/icons/png/html-1.png",
+      minimized: false,
+      selected: true,
+    },
+  ]);
+
+
   return (
-    <div  className='Desktop h-[610px] w-[950px] bg-[#008080] relative'>
+    <div className="Sans-serif h-[610px] w-[950px] bg-[#008080] relative">
+      {tabs.map((tab, i) => {
+        return (
+          <WindowUI tabs={tabs} setTabs={setTabs} i={i} key={i} title={tab.name} icon={tab.icon} minimized={tab.minimized}>
+            <h1>dpofskewf</h1>
+          </WindowUI>
+        );
+      })}
+
       {/* EXIT ICON  */}
-      <div 
-      onClick={() => setClicked(false)}
-      className="absolute right-4 bottom-10">
-        <Icon name={"Exit"} icon={"https://win98icons.alexmeub.com/icons/png/shut_down_normal-4.png"}/>
+      <div
+        onClick={() => setClicked(false)}
+        className="absolute right-4 bottom-10"
+      >
+        <Icon
+          name={"Exit"}
+          icon={
+            "https://win98icons.alexmeub.com/icons/png/shut_down_normal-4.png"
+          }
+        />
       </div>
       {/* MY PORTFOLIO ICON */}
-      <div 
-      className="absolute left-4 top-2">
-        <Icon name={"My Portfolio"} icon={MyPortfolioIcon}/>
+      <div className="absolute left-4 top-2">
+        <Icon name={"My Portfolio"} icon={MyPortfolioIcon} />
       </div>
-      <div 
-      className="absolute left-4 top-20">
-        <Icon name={"Case Jolt"} icon={CaseJoltIcon}/>
+      {/* CASE JOLTS */}
+      <div className="absolute left-4 top-20">
+        <Icon name={"Case Jolt"} icon={CaseJoltIcon} />
       </div>
-      <div 
-      className="absolute left-4 top-40">
-        <Icon name={"Film Folia"} icon={filmfoliaIcon}/>
+      {/* FILM FOLIA */}
+      <div className="absolute left-4 top-40">
+        <Icon name={"Film Folia"} icon={filmfoliaIcon} />
       </div>
-      <div 
-      className="absolute left-4 top-60">
-        <Icon name={"FitHub"} icon={FitHubIcon}/>
+      {/* FITHUB */}
+      <div className="absolute left-4 top-60">
+        <Icon name={"FitHub"} icon={FitHubIcon} />
       </div>
-      <div 
-      className="absolute left-4 top-80">
-        <Icon name={"Stereo"} icon={StereohIcon}/>
+      {/* STEREO */}
+      <div className="absolute left-4 top-80">
+        <Icon name={"Stereo"} icon={StereohIcon} />
       </div>
-        <Navbar setClicked={setClicked}/>
+      <Navbar setTabs={setTabs} setClicked={setClicked} tabs={tabs} />
     </div>
-  )
-}
+  );
+};
 
-export default Desktop
+export default Desktop;

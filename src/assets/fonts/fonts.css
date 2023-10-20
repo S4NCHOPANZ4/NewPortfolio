@@ -1,0 +1,12 @@
+
+@font-face {
+    font-family: 'SansSerifBold';
+    src: url('./SansSerifbold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'SansSerif';
+    src: url('./SansSerif.ttf') format('truetype');
+    font-weight: normal;
+  }
