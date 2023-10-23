@@ -8,7 +8,12 @@ const Navbar = ({ setClicked, tabs, setTabs }) => {
   const openfromTab = (i) =>{
     let newList =[...tabs]
 
-    console.log(newList[i]);
+    newList = newList.map((item)=>{
+      return {
+        ...item,
+        selected: false,
+      }
+    })
 
     newList[i] = {
          ...newList[i],
@@ -76,6 +81,7 @@ const Navbar = ({ setClicked, tabs, setTabs }) => {
             title={tab.name}
             icon={tab.icon}
             selected={tab.selected}
+            minimized={tab.minimized}
           />
         );
       })}
