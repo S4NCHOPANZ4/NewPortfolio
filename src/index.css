@@ -25,6 +25,11 @@
 .OsName{
   font-family: monospace
 }
+.timesNewRoman{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
 .border-navbarIcon{
   border: 2px outset #c3c3c3;
 }
@@ -36,12 +41,48 @@
   box-shadow: inset 1px 1px 1px #535353, 1px 1px 1px white;
 }
 
-.canvas{
-
+.scrollbar-small::-webkit-scrollbar {
+  width: 2px;
 }
 
+.scrollbar-small::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #f0ba454a;
+}
 
+.scrollbar-small::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  background-color: #f0ba454a;
+}
 
+.scrollbar-small::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrollbar-small::-webkit-scrollbar-track:hover {
+  background-color: transparent;
+}
+
+/* Estilo para navegadores basados en Firefox */
+.scrollbar-small {
+  scrollbar-color: #f0ba454a transparent;
+}
+
+.scrollbar-small::-moz-scrollbar-thumb {
+  background-color: #f0ba454a;
+}
+
+.scrollbar-small::-moz-scrollbar-thumb:hover {
+  background-color: #f0ba454a;
+}
+
+.scrollbar-small::-moz-scrollbar-track {
+  background-color: transparent;
+}
+
+.scrollbar-small::-moz-scrollbar-track:hover {
+  background-color: #ddd;
+}
 
 
 

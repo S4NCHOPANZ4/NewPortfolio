@@ -7,6 +7,8 @@ import filmfoliaIcon from "../assets/icons/filmfolia-Icon.png";
 import FitHubIcon from "../assets/icons/FItHub-Icon.png";
 import StereohIcon from "../assets/icons/Stereoh-Icon.png";
 import WindowUI from "./WindowUI.jsx";
+import Portfiolio from "./Portfolio/Portfiolio";
+import FuzzyOverlay from "../Components/FuzzyOverlay";
 
 const Desktop = ({ setClicked }) => {
   const [tabs, setTabs] = useState([
@@ -15,11 +17,12 @@ const Desktop = ({ setClicked }) => {
       icon: "https://win98icons.alexmeub.com/icons/png/html-1.png",
       minimized: false,
       selected: true,
+      content: <Portfiolio/>
     },
   ]);
 
 
-  const openWindow = (name, icon) =>{
+  const openWindow = (name, icon, content) =>{
       let newList = [...tabs]
 
 
@@ -57,7 +60,8 @@ const Desktop = ({ setClicked }) => {
             name: name,
             icon: icon,
             minimized: false,
-            selected: true
+            selected: true,
+            content: content
           }
         )
         setTabs(newList)
@@ -69,11 +73,12 @@ const Desktop = ({ setClicked }) => {
 
 
   return (
-    <div className="Sans-serif h-[610px] w-[950px] bg-[#008080] relative">
+    <div className="Sans-serif h-[610px] w-[950px] bg-[#008080] relative overflow-hidden">
+      <FuzzyOverlay  opacity={5}/>
       {tabs.map((tab, i) => {
         return (
           <WindowUI tabs={tabs} setTabs={setTabs} tab={tab} i={i} key={i} title={tab.name} icon={tab.icon} minimized={tab.minimized}>
-            <h1>dpofskewf</h1>
+            {tab.content}
           </WindowUI>
         );
       })}
@@ -92,7 +97,7 @@ const Desktop = ({ setClicked }) => {
       </div>
       {/* MY PORTFOLIO ICON */}
       <div
-      onClick={() => openWindow("My Portfolio", MyPortfolioIcon)}
+      onClick={() => openWindow("My Portfolio", MyPortfolioIcon, <Portfiolio/>)}
       className="absolute left-4 top-2">
         <Icon name={"My Portfolio"} icon={MyPortfolioIcon} />
       </div>
