@@ -9,6 +9,8 @@ import StereohIcon from "../assets/icons/Stereoh-Icon.png";
 import WindowUI from "./WindowUI.jsx";
 import Portfiolio from "./Portfolio/Portfiolio";
 import FuzzyOverlay from "../Components/FuzzyOverlay";
+import ProjectOverlay from "./projectsWindows/ProjectOverlay";
+import projects from "./projectsWindows/projectData"
 
 const Desktop = ({ setClicked }) => {
   const [tabs, setTabs] = useState([
@@ -103,25 +105,58 @@ const Desktop = ({ setClicked }) => {
       </div>
       {/* CASE JOLTS */}
       <div 
-      onClick={() => openWindow("Case Jolt", CaseJoltIcon)}
+      // icon, image, tools, demo, repo, name, desc
+      onClick={() => openWindow("Case Jolt", CaseJoltIcon, <ProjectOverlay 
+      icon={projects.caseJolt.icon} 
+      image={projects.caseJolt.backgound}
+      tools={projects.caseJolt.icons}
+      demo={projects.caseJolt.demo}
+      repo={projects.caseJolt.url}
+      name={projects.caseJolt.name}
+      desc={projects.caseJolt.desc}
+      />)}
       className="absolute left-4 top-20">
         <Icon name={"Case Jolt"} icon={CaseJoltIcon} />
       </div>
       {/* FILM FOLIA */}
       <div
-      onClick={() => openWindow("Film Folia", filmfoliaIcon)}
+      onClick={() => openWindow("Film Folia", filmfoliaIcon, <ProjectOverlay 
+      icon={projects.FilmFolia.icon} 
+      image={projects.FilmFolia.backgound}
+      tools={projects.FilmFolia.icons}
+      demo={projects.FilmFolia.demo}
+      repo={projects.FilmFolia.url}
+      name={projects.FilmFolia.name}
+      desc={projects.FilmFolia.desc}
+      />)}
       className="absolute left-4 top-40">
         <Icon name={"Film Folia"} icon={filmfoliaIcon} />
       </div>
       {/* FITHUB */}
       <div 
-      onClick={() => openWindow("FitHub", FitHubIcon)}
+      onClick={() => openWindow("FitHub", FitHubIcon, <ProjectOverlay 
+      icon={projects.fitHub.icon} 
+      image={projects.fitHub.backgound}
+      tools={projects.fitHub.icons}
+      demo={projects.fitHub.demo}
+      repo={projects.fitHub.url}
+      name={projects.fitHub.name}
+      desc={projects.fitHub.desc}
+      />)}
       className="absolute left-4 top-60">
         <Icon name={"FitHub"} icon={FitHubIcon} />
       </div>
       {/* STEREO */}
       <div 
-      onClick={() => openWindow("Stereo", StereohIcon)}
+      onClick={() => openWindow("Stereo", StereohIcon,  <ProjectOverlay 
+      icon={projects.Stereo.icon} 
+      image={projects.Stereo.backgound}
+      tools={projects.Stereo.icons}
+      demo={projects.Stereo.demo}
+      repo={projects.Stereo.url}
+      name={projects.Stereo.name}
+      desc={projects.Stereo.desc}
+      />)}
       className="absolute left-4 top-80">
         <Icon name={"Stereo"} icon={StereohIcon} />
       </div>

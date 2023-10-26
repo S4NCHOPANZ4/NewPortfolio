@@ -28,6 +28,10 @@
 .timesNewRoman{
   font-family: 'Times New Roman', Times, serif;
 }
+.agbalumo{
+  font-family: 'Agbalumo', Times, serif;
+
+}
 
 
 .border-navbarIcon{
@@ -47,6 +51,7 @@
 
 .scrollbar-small::-webkit-scrollbar-thumb {
   border-radius: 5px;
+  background-color: #f0ba45;
   background-color: #f0ba454a;
 }
 
@@ -82,6 +87,11 @@
 
 .scrollbar-small::-moz-scrollbar-track:hover {
   background-color: #ddd;
+}
+
+.border-poligon{
+  -webkit-clip-path: polygon(90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0);
+  clip-path: polygon(90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%, 10% 0);
 }
 
 

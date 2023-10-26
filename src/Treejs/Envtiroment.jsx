@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   ContactShadows,
@@ -13,13 +13,25 @@ const Envtiroment = () => {
   const cameraRef = useRef();
 
   const [watching, setWatching] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => {
+      // Actualiza el estado basándote en el ancho de la ventana
+      setIsMobile(window.innerWidth <= 926); // Puedes ajustar el valor según tus necesidades
+    };
+
+    // Agrega el event listener cuando el componente se monta
+    window.addEventListener('resize', handleResize);
+
+
+  }, []); 
   return (
     <>
       <div className="fixed left-40 bottom-20 bg-black px-4 py-2 ">
         <h1 className="text-white">fe</h1>
       </div>
-      <Canvas className="canvas" camera={{ position: [50, 80, -110], fov: 40 }}>
+      <Canvas className="canvas" camera={{ position: [30, 80, -110], fov: 40 }}>
         <OrbitControls
           enabled={!watching}
           enablePan={false}

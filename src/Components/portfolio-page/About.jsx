@@ -15,12 +15,17 @@ import Bright from "../../assets/icons/characters/borders/Bottom-right.png";
 import Bleft from "../../assets/icons/characters/borders/Bottom-left.png";
 import Tool from "./Tool";
 import underline from "../../assets/icons/characters/borders/underline.png";
+import background from "../../assets/icons/characters/borders/ContactBg.png"
+
 const About = ({ setScene }) => {
   return (
-    <div className="w-full h-full flex items-center justify-between timesNewRoman relative p-4">
+    <div
+    style={{ background: `url(${background})`}}
+    className="w-full h-full flex items-center justify-evenly timesNewRoman relative p-4">
       <img
         style={{
           userSelect: "none",
+          pointerEvents: 'none'
         }}
         src={Tleft}
         className="absolute top-1 left-1 h-[150px]"
@@ -28,6 +33,7 @@ const About = ({ setScene }) => {
       <img
         style={{
           userSelect: "none",
+          pointerEvents: 'none'
         }}
         src={Tright}
         className="absolute top-1 right-1 h-[150px]"
@@ -35,6 +41,7 @@ const About = ({ setScene }) => {
       <img
         style={{
           userSelect: "none",
+          pointerEvents: 'none'
         }}
         src={Bleft}
         className="absolute bottom-1 left-1 h-[150px]"
@@ -42,6 +49,7 @@ const About = ({ setScene }) => {
       <img
         style={{
           userSelect: "none",
+          pointerEvents: 'none'
         }}
         src={Bright}
         className="absolute bottom-1 right-1 h-[150px]"
@@ -71,7 +79,7 @@ const About = ({ setScene }) => {
             <span>Projects</span>
 
           </h1>
-          <h1 className="mx-2 cursor-pointer hover:text-[#d8d8d886]">
+          <h1  onClick={() => setScene(4)} className="mx-2 cursor-pointer hover:text-[#d8d8d886]">
             Contact{" "}
           </h1>
         </div>

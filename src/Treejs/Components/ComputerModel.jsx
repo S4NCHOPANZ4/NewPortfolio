@@ -48,7 +48,7 @@ export function ComputerModel({setWatching, rotation}) {
       state.camera.updateProjectionMatrix();
     } 
     else if (!clicked) {
-      state.camera.position.lerp(vec.set(50, 100, -100), 0.001);
+      state.camera.position.lerp(vec.set(50, 50, -70), 0.001);
       state.camera.updateProjectionMatrix();
 
 
