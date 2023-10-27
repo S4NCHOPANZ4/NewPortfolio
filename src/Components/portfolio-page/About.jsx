@@ -15,9 +15,16 @@ import Bright from "../../assets/icons/characters/borders/Bottom-right.png";
 import Bleft from "../../assets/icons/characters/borders/Bottom-left.png";
 import Tool from "./Tool";
 import underline from "../../assets/icons/characters/borders/underline.png";
-import background from "../../assets/icons/characters/borders/ContactBg.png"
+import background from "../../assets/icons/characters/borders/ContactBg.png";
+import resumme from '../../assets/resumme/Juan_Buitrago.pdf'
 
 const About = ({ setScene }) => {
+
+  const goToResume = () => {
+    window.open(resumme, '_blank');
+  }
+
+
   return (
     <div
     style={{ background: `url(${background})`}}
@@ -141,6 +148,7 @@ const About = ({ setScene }) => {
         </p>
       </div>
       <div
+      onClick={() => goToResume()}
         style={{
           userSelect: "none",
         }}
@@ -153,8 +161,7 @@ const About = ({ setScene }) => {
           className="h-[380px] p-5"
         />
         <div className="mb-2 text-[#c8c8c8] flex justify-center items-end">
-          <p className="mr-2 text-xs ">.My Resumme</p>
-          <IoDocumentSharp size={16} className={"text-white"} />
+          <p className="mr-2 text-xs italic">My Resumme</p>
         </div>
       </div>
     </div>

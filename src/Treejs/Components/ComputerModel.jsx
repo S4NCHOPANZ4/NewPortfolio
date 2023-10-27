@@ -4,7 +4,7 @@ import { Html, OrbitControls, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Desktop from "../../Pages/Desktop";
 
-export function ComputerModel({setWatching, rotation}) {
+export function ComputerModel({ setWatching, rotation, setLoaded }) {
   const { nodes, materials } = useGLTF("/public/Computer/ComputerModel.gltf");
   const group = useRef();
   const htmlRef = useRef();
@@ -14,14 +14,19 @@ export function ComputerModel({setWatching, rotation}) {
   const [clicked, setClicked] = useState(false);
   const vec = new THREE.Vector3();
 
-  useEffect(()=>{
-    if(clicked){
-      setWatching(true)
-    }else if(!clicked){
-      setWatching(false)
+  useEffect(() =>{
+    if (meshRef.current && meshRef.current.geometry) {
+      setLoaded(true)
     }
-  },[clicked])
-  
+  },[meshRef])
+
+  useEffect(() => {  
+    if (clicked) {
+      setWatching(true);
+    } else if (!clicked) {
+      setWatching(false);
+    }
+  }, [clicked]);
   useFrame((state) => {
     const t = state.clock.getElapsedTime();
     group.current.rotation.x = THREE.MathUtils.lerp(
@@ -46,11 +51,9 @@ export function ComputerModel({setWatching, rotation}) {
         0.03
       );
       state.camera.updateProjectionMatrix();
-    } 
-    else if (!clicked) {
+    } else if (!clicked) {
       state.camera.position.lerp(vec.set(50, 50, -70), 0.001);
       state.camera.updateProjectionMatrix();
-
 
       const targetRotationX = -(45 * Math.PI) / 180;
       const targetPositionZ = 0;
@@ -90,12 +93,11 @@ export function ComputerModel({setWatching, rotation}) {
       dispose={null}
       ref={group}
       onClick={() => {
-        if(clicked) return
-        setClicked(true)}}
-
+        if (clicked) return;
+        setClicked(true);
+      }}
     >
       <mesh
- 
         ref={meshRef}
         scale={50}
         geometry={nodes.BM86_Portable.geometry}
@@ -109,9 +111,8 @@ export function ComputerModel({setWatching, rotation}) {
           className="content transition-all duration-300 ease-in-out"
           transform
           occlude
-          
         >
-         <Desktop setClicked={setClicked}/>
+          <Desktop setClicked={setClicked} />
         </Html>
       </mesh>
     </group>
