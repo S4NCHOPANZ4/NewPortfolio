@@ -4,11 +4,11 @@ import FilmFolia from "../../assets/icons/filmfolia-Icon.png"
 import StereoHIcon from "../../assets/icons/Stereoh-Icon.png"
 import TikTokIcon from "../../assets/icons/tiktokIcon.png"
 //Backgrounds
-import caseJoltBg from  "../../assets/icons/projectImgs/CaseJolt.png"
-import fitHubImg from "../../assets/icons/projectImgs/FitHub.png"
-import stereoHImg from "../../assets/icons/projectImgs/stereo.png"
-import TikTokImg from "../../assets/icons/projectImgs/tiktok.png"
-import filmFolia from "../../assets/icons/projectImgs/FilmFolia.png"
+import caseJoltBg from  "../../assets/icons/projectBgs/CaseJolt.png"
+import fitHubImg from "../../assets/icons/projectBgs/FitHubBg.png"
+import stereoHImg from "../../assets/icons/projectBgs/stereo.png"
+import TikTokImg from "../../assets/icons/projectBgs/tiktok.png"
+import filmFolia from "../../assets/icons/projectBgs/FilmFolia.png"
 
 export default [{
     id: 0,
