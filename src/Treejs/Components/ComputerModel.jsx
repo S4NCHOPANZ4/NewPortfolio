@@ -1,12 +1,12 @@
 import * as THREE from "three";
 import React, { useEffect, useRef, useState } from "react";
-import { Html, OrbitControls, useGLTF } from "@react-three/drei";
+import { Html, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Desktop from "../../Pages/Desktop";
 
 
 export function ComputerModel({ setWatching, rotation, setLoaded }) {
-  const { nodes, materials } = useGLTF("/public/Computer/ComputerModel.gltf");
+  const { nodes, materials } = useGLTF("public/Computer/ComputerModel.gltf");
   const group = useRef();
   const htmlRef = useRef();
   const htmlMesh = useRef();
@@ -120,3 +120,4 @@ export function ComputerModel({ setWatching, rotation, setLoaded }) {
   );
 }
 
+// useGLTF.preload("/public/Computer/ComputerModel.gltf");
