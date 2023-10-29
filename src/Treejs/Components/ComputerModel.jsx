@@ -4,8 +4,9 @@ import { Html, OrbitControls, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import Desktop from "../../Pages/Desktop";
 
+
 export function ComputerModel({ setWatching, rotation, setLoaded }) {
-  const { nodes, materials } = useGLTF("/public/Computer/ComputerModel.gltf");
+  const { nodes, materials } = useGLTF("../../../public/Computer/ComputerModel.gltf");
   const group = useRef();
   const htmlRef = useRef();
   const htmlMesh = useRef();
