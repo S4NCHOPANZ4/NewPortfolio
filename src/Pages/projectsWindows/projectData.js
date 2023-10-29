@@ -4,10 +4,10 @@ import FilmFolia from "../../assets/icons/filmfolia-Icon.png"
 import StereoHIcon from "../../assets/icons/Stereoh-Icon.png"
 
 //Backgrounds
-import caseJoltBg from  "../../assets/icons/projectImgs/CaseJolt.png"
-import fitHubImg from "../../assets/icons/projectImgs/FitHub.png"
-import stereoHImg from "../../assets/icons/projectImgs/stereo.png"
-import filmFolia from "../../assets/icons/projectImgs/FilmFolia.png"
+import caseJoltBg from  "../../assets/icons/projectBgs/CaseJolt.png"
+import FitHubImg from "../../assets/icons/projectBgs/FitHubBg.png"
+import stereoHImg from "../../assets/icons/projectBgs/stereo.png"
+import filmFolia from "../../assets/icons/projectBgs/FilmFolia.png"
 
 export default {
     caseJolt:{
@@ -31,7 +31,7 @@ fitHub:{
     name: "FitHub",
     icon: FitHubIcon,
     icons: ["React", "Typescript", "Tailwind", "Api"],
-    backgound: fitHubImg, 
+    backgound: FitHubImg, 
     desc:`This page is an ideal wiki to manage and lead the adventure through the gym with guides, 
     BMI meters, daily calorie counter, etc... React TypeScript and adorned with the elegance of 
     Tailwind CSS. This application is powered by not one, not two, but three different APIs, 
