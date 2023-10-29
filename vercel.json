@@ -1,7 +1,3 @@
 {
-    "public": true,
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" },
-      { "source": "/Computer/ComputerModel.gltf", "destination": "/Computer/ComputerModel.gltf" }
-    ]
-  }
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
