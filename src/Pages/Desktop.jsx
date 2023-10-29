@@ -7,7 +7,7 @@ import filmfoliaIcon from "../assets/icons/filmfolia-Icon.png";
 import FitHubIcon from "../assets/icons/FItHub-Icon.png";
 import StereohIcon from "../assets/icons/Stereoh-Icon.png";
 import WindowUI from "./WindowUI.jsx";
-import Portfiolio from "./portfolio/Portfiolio";
+import Portfiolio from "./portfoliofolder/Portfiolio.jsx";
 import FuzzyOverlay from "../Components/FuzzyOverlay";
 import ProjectOverlay from "./projectsWindows/ProjectOverlay";
 import projects from "./projectsWindows/projectData"
