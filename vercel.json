@@ -1,8 +1,12 @@
 {
     "rewrites": [
+      { 
+        "source": "/Computer/:path*", 
+        "destination": "/public/Computer/:path*" 
+      },
       {
-        "source": "/Computer/:path*",
-        "destination": "/public/Computer/:path*"
+        "source": "/(.*)",
+        "destination": "/"
       }
     ]
   }
