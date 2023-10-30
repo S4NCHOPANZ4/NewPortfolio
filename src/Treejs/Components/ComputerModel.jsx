@@ -120,4 +120,4 @@ export function ComputerModel({ setWatching, rotation, setLoaded }) {
   );
 }
 
-// useGLTF.preload("/public/Computer/ComputerModel.gltf");
+useGLTF.preload("/Computer/ComputerModel.gltf");
