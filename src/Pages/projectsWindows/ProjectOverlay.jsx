@@ -14,6 +14,7 @@ const ProjectOverlay = ({ icon, image, tools, demo, repo, name, desc }) => {
     window.open(resumme, '_blank');
   }
 
+
   return (
     <div className="h-full w-full  justify-center overflow-auto timesNewRoman text-[#3d3d3d] ">
       <div className="flex  justify-evenly w-[650px] mx-auto  mt-[0.09rem] ">
@@ -55,10 +56,14 @@ const ProjectOverlay = ({ icon, image, tools, demo, repo, name, desc }) => {
           </div>
           <p>{desc}</p>
           <div>
-            <img src="" alt="" />
-            <div>
-              <h1>Looking for my resumme?</h1>
-              <a href="">Click here to open</a>
+            <div className="px-3 py-1 flex justify-between items-center border border-gray-900 rounded-sm mt-4">
+              <div>
+                <h1>Looking for my resumme?</h1>
+                <a onClick={() => goToResume()} className="cursor-pointer text-sm text-blue-600 underline">Click here to open</a>
+              </div>
+              <div>
+                <img onClick={() => goToResume()} src="https://win98icons.alexmeub.com/icons/png/file_eye.png" className="cursor-pointer" alt="icon" />
+              </div>
             </div>
           </div>
         </div>
