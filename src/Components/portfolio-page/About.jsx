@@ -16,7 +16,7 @@ import Bleft from "../../assets/icons/characters/borders/Bottom-left.png";
 import Tool from "./Tool";
 import underline from "../../assets/icons/characters/borders/underline.png";
 import background from "../../assets/icons/characters/borders/ContactBg.png";
-import resumme from '../../assets/resumme/Juan_Buitrago.pdf'
+import resumme from '../../assets/resumme/EnglishResumme.pdf'
 
 const About = ({ setScene }) => {
 
